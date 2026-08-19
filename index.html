@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -21,6 +21,9 @@
       <header class="site-header">
         <nav class="nav container" aria-label="Main navigation">
           <a href="#top" class="brand">Ayesa Taiyeeba Apa</a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
           <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -30,7 +33,7 @@
             <a href="#contact">Contact</a>
           </div>
           <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
-            <span class="theme-icon">🌙</span>
+            <span class="theme-icon" aria-hidden="true">☾</span>
           </button>
         </nav>
       </header>
@@ -56,12 +59,17 @@
             </ul>
           </div>
 
-          <div class="hero-visual" aria-label="Profile placeholder">
+          <div class="hero-visual" aria-label="Quality engineering dashboard">
             <div class="profile-card">
-              <div class="profile-photo placeholder-box">Profile photo placeholder</div>
+              <div class="profile-topline"><span class="status-dot"></span> Quality system online <span>● 2026</span></div>
+              <div class="dashboard-score">
+                <div><span class="score-label">Release confidence</span><strong>99.5%</strong><span class="score-note">issue resolution rate</span></div>
+                <div class="score-ring"><span>QA</span></div>
+              </div>
+              <div class="signal-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
               <div class="profile-meta">
-                <span>Dhaka, Bangladesh</span>
-                <span>Software Quality Assurance</span>
+                <span><b>03+</b> years building release confidence</span>
+                <span><b>08</b> testing disciplines in practice</span>
               </div>
             </div>
           </div>
@@ -279,8 +287,18 @@
             <h2>Selected work across ERP, security, AI, and customer interaction systems.</h2>
           </div>
 
+          <div class="project-toolbar" role="toolbar" aria-label="Filter projects">
+            <span>Explore by domain</span>
+            <div class="filter-buttons">
+              <button class="filter-button active" type="button" data-filter="all">All work</button>
+              <button class="filter-button" type="button" data-filter="enterprise">Enterprise</button>
+              <button class="filter-button" type="button" data-filter="ai">AI &amp; IoT</button>
+              <button class="filter-button" type="button" data-filter="fintech">Fin-tech</button>
+            </div>
+          </div>
+
           <div class="project-grid">
-            <article class="project-card">
+            <article class="project-card" data-category="enterprise">
               <div class="project-thumb placeholder-box">Project screenshot placeholder</div>
               <h3>CGL OIL-OTL ERP</h3>
               <p>Garments ERP application covering order processing, inventory management, production tracking, and shipment handling.</p>
@@ -290,7 +308,7 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="ai">
               <div class="project-thumb placeholder-box">Project screenshot placeholder</div>
               <h3>Guard Attendance System</h3>
               <p>Security attendance system supporting punch in/out, roster scheduling, and real-time attendance log validation.</p>
@@ -300,7 +318,7 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="ai">
               <div class="project-thumb placeholder-box">Project screenshot placeholder</div>
               <h3>Multiple Face Recognition</h3>
               <p>AI-powered attendance system using deep learning-based facial recognition.</p>
@@ -310,7 +328,7 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="enterprise">
               <div class="project-thumb placeholder-box">Project screenshot placeholder</div>
               <h3>IVR System</h3>
               <p>Automated call routing system integrating NLP and CRM data for customer interactions.</p>
@@ -320,7 +338,7 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="fintech">
               <div class="project-thumb placeholder-box">Project screenshot placeholder</div>
               <h3>iSMS &amp; Auto Purchase</h3>
               <p>SaaS-based SMS Gateway and Auto Purchase platform enabling automated messaging and procurement workflows.</p>
@@ -330,7 +348,7 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="fintech">
               <div class="project-thumb placeholder-box">Project screenshot placeholder</div>
               <h3>LMS &amp; Credit Scoring</h3>
               <p>Loan Management System with integrated eKYC and credit scoring for automated loan processing.</p>
@@ -340,7 +358,7 @@
               </ul>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" data-category="enterprise">
               <div class="project-thumb placeholder-box">Project screenshot placeholder</div>
               <h3>Ebuddy &amp; KPI Management</h3>
               <p>Employee Management System featuring an AI-driven brain for task management, voice input, CRM, and KPI/project tracking across Web and App.</p>
